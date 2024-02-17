@@ -2,6 +2,8 @@
 #from Bubble_sort import bubble_sort
 #from Merge_Sort import merge_sort
 
+import secrets
+
 def selection_sort(a_list):
     for fill_slot in range(len(a_list) - 1, 0, -1):
         pos_of_max = 0
@@ -50,11 +52,6 @@ def merge_sort(a_list):
             k=k+1
     #print("Merging ", a_list)
     
-
-
-
-#===============================================================================
-import random
 import time
 
 def main():
@@ -67,7 +64,7 @@ def main():
         my_list = []
 
         for i in range(list_size):
-            my_list.append(random.randint(1,1000))
+            my_list.append(secrets.SystemRandom().randint(1,1000))
         start_time = time.time()
         selection_sort(my_list)
         stop_time = time.time()
@@ -85,7 +82,7 @@ def main():
         my_list = []
 
         for i in range(list_size):
-            my_list.append(random.randint(1,1000))
+            my_list.append(secrets.SystemRandom().randint(1,1000))
         start_time = time.time()
         bubble_sort(my_list)
         stop_time = time.time()
@@ -103,7 +100,7 @@ def main():
         my_list = []
 
         for i in range(list_size):
-            my_list.append(random.randint(1,1000))
+            my_list.append(secrets.SystemRandom().randint(1,1000))
         start_time = time.time()
         merge_sort(my_list)
         stop_time = time.time()
